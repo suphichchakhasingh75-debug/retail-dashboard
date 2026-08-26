@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: retail_data # The name of the source, used to reference this source in dbt models
+    schema: dbt_duckdb # The schema(dataset name) to which the source belongs. main is the default schema for DuckDB
+    description: "Raw flat files queried directly from the local workspace folder"
+    meta: # Additional metadata for the source
+      # {name} is a placeholder that automatically injects the table names listed below
+      external_location: 'datasets/{name}.csv'
+    tables:
+      - name: categories                  
+        description: "categories data from the retail_data datasets"
+      - name: customers                  
+        description: "customers data from the retail_data datasets"
+      - name: employees
+        description: "employees data from the retail_data datasets"
+      - name: order_items
+        description: "order_items data from the retail_data datasets"
+      - name: orders
+        description: "orders data from the retail_data datasets"
+      - name: payments
+        description: "payments data from the retail_data datasets"
+      - name: products                  
+        description: "products data from the retail_data datasets"
+      - name: promotions                  
+        description: "promotions data from the retail_data datasets"
+      - name: returns
+        description: "returns data from the retail_data datasets"
+      - name: shipments
+        description: "shipments data from the retail_data datasets"
+      - name: stores
+        description: "stores data from the retail_data datasets"
+      - name: suppliers
+        description: "suppliers data from the retail_data datasets"

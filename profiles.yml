@@ -1,0 +1,21 @@
+retail_data:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /workspaces/Mini-Project/retail_data/dev.duckdb
+      schema: dbt_duckdb
+      threads: 1
+retail_data:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 1
+
+    prod:
+  type: duckdb
+  path: prod.duckdb
+  threads: 4
+  
+  target: dev

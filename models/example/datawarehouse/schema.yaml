@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: dim_customer
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_date
+    columns:
+      - name: date_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_employee
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_payment
+    columns:
+      - name: payment_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_product
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_promotion
+    columns:
+      - name: promotion_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_store
+    columns:
+      - name: store_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_supplier
+    columns:
+      - name: supplier_id
+        tests:
+          - not_null
+          - unique
+  - name: fact_sales
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
